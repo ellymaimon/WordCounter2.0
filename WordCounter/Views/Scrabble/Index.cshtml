@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+  <div class='container'>
+    <h1>Scrabble</h1>
+    <h2>Welcome to the Scrabble Word Scorer.</h2>
+    <h3>Ever been curious how many points a particular word is worth in Scrabble? Good! We can help.</h3>
+
+    <form action="/scrabble/solution" method="post">
+        <div class="form-group">
+            <label for="word">Enter your word:</label>
+            <input type="text" class="form-control" name="word" id="word" placeholder="jukebox">
+        </div>
+        <button type="submit" class="btn btn-info">How many points?</button>
+    </form>
+  </div>
