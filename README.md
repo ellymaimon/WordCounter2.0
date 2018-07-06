@@ -1,14 +1,14 @@
 # Word Counter
 
-#### Epicodus C# Week 1 Code Review, 06/29/2018
+#### Epicodus C# Week 2 Code Review, 07/06/2018
 
 #### By Elly Maimon
 
 ## Description
 
-A simple application written in C# that returns a count of how many times a given word appeared in a given phrase.
+A .NET web app that allows the user to run two different Word Tools: a word counter, and a Scrabble points counter. Both of the tools have been written in C#.
 
-## Specs
+## Specs for Word Counter
 
 | Behavior | Input | Output | Explanation |
 |----------|-------|--------|-------------|
@@ -26,6 +26,15 @@ A simple application written in C# that returns a count of how many times a give
 | Program finds how many times a word shows up in a given phrase despite the word being adjacent to a punctuation mark. | "hello" "hello, to you, hello." | "2" | Further complexity by forcing the program to take into account having to ignore punctuation marks. |
 | Program determines whether to look for single letters or a whole word based on inputs. | "hi" "high hi yo hi" OR "h" "high hi yo hi" | "2" OR "4"| Adding automated determination between single character inputs and multiple character inputs for further level of complexity. |
 | Program accepts multiple word input. | "hi there" "hi hi there hi" | "1" | Further expanding on idea by accepting multiple word input to search phrase for. |
+
+## Specs for Scrabble Counter
+
+| Behavior | Input | Output |
+|----------|-------|--------|
+| Program receives word and returns points value. | hi | 4 |
+| Program receives multiple words and returns points value. | hi hi | 8 |
+| Program receives words with capital letters and returns points value. | Hi | 4 |
+
 
 ## Setup on OSX
 
