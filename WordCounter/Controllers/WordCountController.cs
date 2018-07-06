@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WordCounter.Controllers
@@ -19,5 +20,16 @@ namespace WordCounter.Controllers
             game.GetOutcome();
             return View("Solution", game);
         }
+
+        [HttpPost("/wordcounter/searched")]
+        public ActionResult AllWords()
+        {
+            RepeatCounter.GetAllPhrases();
+            RepeatCounter.GetAllWords();
+            return View("Searched", game);
+        }
+
+        [HttpGet("/wordcounter/searched")]
+        public ActionResult Searched() => View();
     }
 }

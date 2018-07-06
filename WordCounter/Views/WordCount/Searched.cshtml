@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+    <h1>Word Counter</h1>
+    <div class="row">
+        <div class="col">
+            <h2>You've searched the following words:</h2>
+            <ul>
+                @foreach (var word in Model.GetAllWords())
+                {
+                    <li>word</li>
+                }
+            </ul>
+        </div>
+
+        <div class="col">
+            <h2>You've searched in the following phrases:</h2>
+            <ul>
+                @foreach (var phrase in Model.GetAllPhrases())
+                {
+                    <li>phrase</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
