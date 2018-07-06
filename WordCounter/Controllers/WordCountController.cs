@@ -21,15 +21,12 @@ namespace WordCounter.Controllers
             return View("Solution", game);
         }
 
-        [HttpPost("/wordcounter/searched")]
-        public ActionResult AddSearched()
+        [HttpGet("/wordcounter/searched")]
+        public ActionResult Searched()
         {
             Dictionary<string, string> searched = new Dictionary<string, string>();
             searched = RepeatCounter.GetSearched();
-            return View("Searched", searched);
+            return View(searched);
         }
-
-        [HttpGet("/wordcounter/searched")]
-        public ActionResult Searched() => View();
     }
 }

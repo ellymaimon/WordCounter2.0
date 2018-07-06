@@ -8,9 +8,8 @@
         <div class="col">
             <h2>You've searched the following words:</h2>
             <ul>
-                @foreach(KeyValuePair<string, string> entry in Model)
-                {
-                    <li>Entry.key</li>
+                @foreach (var item in Model) {
+                    <li>@(item.Key)</li>
                 }
             </ul>
         </div>
@@ -18,9 +17,9 @@
         <div class="col">
             <h2>You've searched in the following phrases:</h2>
             <ul>
-                @foreach(KeyValuePair<string, string> entry in Model)
+                @foreach (var item in Model)
                 {
-                    <li>Entry.value</li>
+                    <li>@(item.Value)</li>
                 }
             </ul>
         </div>

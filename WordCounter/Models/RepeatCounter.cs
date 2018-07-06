@@ -25,6 +25,7 @@ namespace WordCounter
         public void SetUserPhrase(string word)
         {
             _userPhrase = word.ToLower();
+            _allSearched[_userWord] = _userPhrase;
         }
 
         public string GetUserPhrase()
