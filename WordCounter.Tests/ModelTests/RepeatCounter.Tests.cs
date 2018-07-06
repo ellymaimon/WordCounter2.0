@@ -26,17 +26,6 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void GetSplitUserPhrase_GetSplitUserPhrase_StringArray()
-        {
-            RepeatCounter testRepeatCounter = new RepeatCounter();
-            string testPhrase = "test test test";
-            string[] testSplitPhrase = {"test", "test", "test"};
-            testRepeatCounter.SetUserPhrase(testPhrase);
-            testRepeatCounter.SplitPhrase();
-            CollectionAssert.AreEqual(testSplitPhrase, testRepeatCounter.GetSplitPhrase());
-        }
-
-        [TestMethod]
         public void IncrementGetTotalCount_IncrementGetTotalCount_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();

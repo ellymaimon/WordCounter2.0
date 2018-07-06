@@ -36,11 +36,6 @@ namespace WordCounter
             _splitPhrase = GetUserPhrase().Split(specialCharacters);
         }
 
-        public string[] GetSplitPhrase()
-        {
-            return _splitPhrase;
-        }
-
         public void IncrementTotalCount()
         {
             _totalCount++;
@@ -65,7 +60,7 @@ namespace WordCounter
         public void GetOutcomeWordsInPhrase()
         {
             SplitPhrase();
-            foreach (string word in GetSplitPhrase())
+            foreach (string word in _splitPhrase)
             {
                 if (GetUserWord() == word) IncrementTotalCount();
             }
