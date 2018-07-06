@@ -7,10 +7,14 @@ namespace WordCounter.Controllers
         [HttpGet("/wordcounter")]
         public ActionResult Index() => View();
 
-        // [HttpGet("/wordcounter/solution")]
-        // public ActionResult Solution()
-        // {
-        //     return View();
-        // }
+        [HttpGet("/wordcounter/solution")]
+        public ActionResult Solution()
+        {
+            RepeatCounter game = new RepeatCounter();
+            game.SetUserWord(Request.Query["word"]);
+            game.SetUserPhrase(Request.Query["phrase"]);
+            game.GetOutcome();
+            return View(game);
+        }
     }
 }
