@@ -1,0 +1,9 @@
+@{
+  Layout = "_Layout";
+}
+
+  <div class='container'>
+    <h1>Scrabble</h1>
+    <p>Your word <strong>@Model.GetInputtedWord()</strong> is worth <strong>@Model.GetFinalScore()</strong> points.</p>
+    <p><a href="/scrabble">Go Again</a></p>
+  </div>
