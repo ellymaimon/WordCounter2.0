@@ -4,6 +4,7 @@
 
   <div class='container'>
     <h1>Word Counter</h1>
-    <h2>Your word @Model.GetUserWord() showed up in the phrase @Model.GetUserPhrase() a total of @Model.GetTotalCount() times.</h2>
-    <h3><a href="/wordcounter">Go Again</a></h3>
+    <p>Your word <strong>@Model.GetUserWord()</strong> showed up in the phrase <strong>@Model.GetUserPhrase()</strong> 
+    a total of <strong>@Model.GetTotalCount()</strong> times.</p>
+    <p><a href="/wordcounter">Go Again</a></p>
   </div>
