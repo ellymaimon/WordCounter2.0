@@ -15,21 +15,6 @@ namespace WordCounter.Tests
             ActionResult indexView = controller.Index();
             Assert.IsInstanceOfType(indexView, typeof(ViewResult));
         }
-
-        [TestMethod]
-        public void Solution_HasCorrectModelType_RepeatCounterObject()
-        {
-            //Arrange
-            WordCountController controller = new WordCountController();
-            IActionResult actionResult = controller.GetResults();
-            ViewResult solutionView = controller.Solution() as ViewResult;
-
-            //Act
-            var result = solutionView.ViewData.Model;
-
-            //Assert
-            Assert.IsInstanceOfType(result, typeof(object));
-        }
     }
 
 }

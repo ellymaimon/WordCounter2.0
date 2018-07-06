@@ -69,8 +69,9 @@ namespace WordCounter
         public void GetOutcomePhraseInPhrase()
         {
             int i = 0;
-            while ((i = GetUserPhrase().IndexOf(GetUserWord(), i)) != -1)
+            while (i != -1)
             {
+                i = GetUserPhrase().IndexOf(GetUserWord(), i);
                 IncrementTotalCount();
                 i++;
             }
