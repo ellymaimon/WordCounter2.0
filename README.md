@@ -1,4 +1,4 @@
-# Word Counter
+# Word Tools: Counter and Scrabble
 
 #### Epicodus C# Week 2 Code Review, 07/06/2018
 
