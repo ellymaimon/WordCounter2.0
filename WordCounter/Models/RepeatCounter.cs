@@ -14,7 +14,7 @@ namespace WordCounter
         public void SetUserWord(string word)
         {
             _userWord = word.ToLower();
-            _allSearched.Add(_userWord, "");
+            if(!(_allSearched.ContainsKey(_userWord))) _allSearched.Add(_userWord, "");
         }
 
         public string GetUserWord()
@@ -25,7 +25,7 @@ namespace WordCounter
         public void SetUserPhrase(string word)
         {
             _userPhrase = word.ToLower();
-            _allSearched[_userWord] = _userPhrase;
+            if(_allSearched.ContainsKey(_userWord)) _allSearched[_userWord] = _userPhrase;
         }
 
         public string GetUserPhrase()
