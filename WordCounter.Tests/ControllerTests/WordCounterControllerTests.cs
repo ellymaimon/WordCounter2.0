@@ -1,8 +1,6 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.AspNetCore.Mvc;
 using WordCounter.Controllers;
-using WordCounter;
 
 namespace WordCounter.Tests
 {
@@ -18,23 +16,18 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void Solution_HasCorrectModelType_Object()
+        public void Index_HasCorrectModelType_RepeatCounterObject()
         {
             //Arrange
             WordCountController controller = new WordCountController();
             IActionResult actionResult = controller.Solution();
-            ViewResult solutionView = controller.Solution() as ViewResult;
-            RepeatCounter game = new RepeatCounter();
+            ViewResult indexView = controller.Solution() as ViewResult;
 
             //Act
-            var result = solutionView.ViewData.Model;
-            var r2 = result.GetType();
-            var r3 = game.GetType();
-            Console.WriteLine(r2);
-            Console.WriteLine(r3);
+            var result = indexView.ViewData.Model;
 
             //Assert
-            Assert.AreEqual(r2, r3);
+            Assert.IsInstanceOfType(result, typeof(RepeatCounter));
         }
     }
 

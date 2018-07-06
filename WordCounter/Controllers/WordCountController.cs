@@ -8,10 +8,7 @@ namespace WordCounter.Controllers
         public ActionResult Index() => View();
 
         [HttpGet("/wordcounter/solution")]
-        public ActionResult Solution()
-        {
-            return View();
-        }
+        public ActionResult Solution() => View();
 
         [HttpPost("/wordcounter/solution")]
         public ActionResult GetResults()
