@@ -10,11 +10,17 @@ namespace WordCounter.Controllers
         [HttpGet("/wordcounter/solution")]
         public ActionResult Solution()
         {
+            return View();
+        }
+
+        [HttpPost("/wordcounter/solution")]
+        public ActionResult GetResults()
+        {
             RepeatCounter game = new RepeatCounter();
-            game.SetUserWord(Request.Query["word"]);
-            game.SetUserPhrase(Request.Query["phrase"]);
+            game.SetUserWord(Request.Form["word"]);
+            game.SetUserPhrase(Request.Form["phrase"]);
             game.GetOutcome();
-            return View(game);
+            return View("Solution", game);
         }
     }
 }

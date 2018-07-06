@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.AspNetCore.Mvc;
 using WordCounter.Controllers;
@@ -17,7 +18,7 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void Solution_HasCorrectModelType_GameObject()
+        public void Solution_HasCorrectModelType_Object()
         {
             //Arrange
             WordCountController controller = new WordCountController();
@@ -27,9 +28,13 @@ namespace WordCounter.Tests
 
             //Act
             var result = solutionView.ViewData.Model;
+            var r2 = result.GetType();
+            var r3 = game.GetType();
+            Console.WriteLine(r2);
+            Console.WriteLine(r3);
 
             //Assert
-            Assert.IsInstanceOfType(result, typeof(RepeatCounter));
+            Assert.AreEqual(r2, r3);
         }
     }
 
