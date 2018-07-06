@@ -22,11 +22,11 @@ namespace WordCounter.Controllers
         }
 
         [HttpPost("/wordcounter/searched")]
-        public ActionResult AllWords()
+        public ActionResult AddSearched()
         {
-            RepeatCounter.GetAllPhrases();
-            RepeatCounter.GetAllWords();
-            return View("Searched", game);
+            Dictionary<string, string> searched = new Dictionary<string, string>();
+            searched = RepeatCounter.GetSearched();
+            return View("Searched", searched);
         }
 
         [HttpGet("/wordcounter/searched")]

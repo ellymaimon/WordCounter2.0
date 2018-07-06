@@ -8,9 +8,9 @@
         <div class="col">
             <h2>You've searched the following words:</h2>
             <ul>
-                @foreach (var word in Model.GetAllWords())
+                @foreach(KeyValuePair<string, string> entry in Model)
                 {
-                    <li>word</li>
+                    <li>Entry.key</li>
                 }
             </ul>
         </div>
@@ -18,9 +18,9 @@
         <div class="col">
             <h2>You've searched in the following phrases:</h2>
             <ul>
-                @foreach (var phrase in Model.GetAllPhrases())
+                @foreach(KeyValuePair<string, string> entry in Model)
                 {
-                    <li>phrase</li>
+                    <li>Entry.value</li>
                 }
             </ul>
         </div>
