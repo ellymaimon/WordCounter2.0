@@ -1,18 +1,31 @@
-# Project Name Here
+# Word Counter
 
-#### Epicodus C# exercise, date
+#### Epicodus C# Week 1 Code Review, 06/29/2018
 
-#### By Your Name Here
+#### By Elly Maimon
 
 ## Description
 
-Add a description here
+A simple application written in C# that returns a count of how many times a given word appeared in a given phrase.
 
 ## Specs
 
-| Behavior | Input | Output |
-|----------|-------|--------|
-| Behavior | input | output |
+| Behavior | Input | Output | Explanation |
+|----------|-------|--------|-------------|
+| Program finds how many times a letter shows up in a given word. | "h", "hello" | "1" | A single letter is the simplest case to test here. |
+| Program finds how many times a letter shows up in a given word where there is more than one instance of that letter. | "l", "hello" | "2" | Getting slightly more complex, I now add a second instance of the letter. |
+| Program finds how many times a letter shows up in a given word despite capitalization. | "l", "heLLo" | "2" | Before moving on to multiple words, I handle case sensitivity. |
+| Program finds how many times a single numbers shows up in a larger number. | "3", "333" | "3" | I include the case of numbers to keep to characters before moving on to a phrase. |
+| Program finds how many times a letter shows up in a given word despite mixing in numbers. | "l" , "3hello3" | "2" | Now I can handle the mixture before expanding to multiple word phrases. |
+| Program finds a match when given a word and then the same word. | "hello", "hello" | "1" | This is the simplest test case where we are now looking for more than just one letter or number. |
+| Program finds how many times a word shows up in a given phrase. | "hello", "hello to you" | "1" | Now I add multiple words to further expand. |
+| Program finds how many times a word shows up in a given phrase where there is more than one instance of the word. | "hello", "hello to you hello to you" | "2" | Now we add multiple occurrences in the next simplest version.
+| Program finds how many times a word shows up in a given phrase, despite the capitalization. | "hello ", "hello there HeLLo" | "2" | Testing our earlier edge case in a more complex environment.
+| Program finds how many times a number shows up in a given phrase. | "3" "3 Hello 3 people" | "2" | Complicating with numbers |
+| Program finds how many times a number shows up in a given phrase despite the number being in a word. | "3" "3Hello 3 peopl3e" | "3" | Further complexity by forcing the program to take into account having to search inside a word for a number. |
+| Program finds how many times a word shows up in a given phrase despite the word being adjacent to a punctuation mark. | "hello" "hello, to you, hello." | "2" | Further complexity by forcing the program to take into account having to ignore punctuation marks. |
+| Program determines whether to look for single letters or a whole word based on inputs. | "hi" "high hi yo hi" OR "h" "high hi yo hi" | "2" OR "4"| Adding automated determination between single character inputs and multiple character inputs for further level of complexity. |
+| Program accepts multiple word input. | "hi there" "hi hi there hi" | "1" | Further expanding on idea by accepting multiple word input to search phrase for. |
 
 ## Setup on OSX
 
@@ -24,12 +37,6 @@ Add a description here
 * Run `dotnet test` from the test directory to run the testing suite
 * Run `dotnet run` to start the server
 
-## Contribution Requirements
-
-1. Clone the repo
-1. Make a new branch
-1. Commit and push your changes
-1. Create a PR
 
 ## Technologies Used
 
@@ -37,10 +44,11 @@ Add a description here
 
 ## Links
 
-* Add links here
+* Link to repository for this website: https://github.com/ellymaimon/WordCounter2.0
 
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Your Name Here**
+Copyright (c) 2018 **Elly Maimon**
+
