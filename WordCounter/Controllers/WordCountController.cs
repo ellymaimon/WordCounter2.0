@@ -12,11 +12,11 @@ namespace WordCounter.Controllers
         public ActionResult Solution() => View();
 
         [HttpPost("/wordcounter/solution")]
-        public ActionResult GetResults()
+        public ActionResult GetResults(string word, string phrase)
         {
             RepeatCounter game = new RepeatCounter();
-            game.SetUserWord(Request.Form["word"]);
-            game.SetUserPhrase(Request.Form["phrase"]);
+            game.SetUserWord(word);
+            game.SetUserPhrase(phrase);
             game.GetOutcome();
             return View("Solution", game);
         }
